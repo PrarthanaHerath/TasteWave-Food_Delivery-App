@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#6200EE</color>
+    <color name="primary_variant">#3700B3</color>
+    <color name="secondary_color">#03DAC6</color>
+    <color name="background_light">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="green">#4CAF50</color> <!-- Completed -->
+    <color name="orange">#FF9800</color> <!-- Pending -->
+    <color name="red">#F44336</color> <!-- Failed/Cancelled -->
+
+
+</resources>

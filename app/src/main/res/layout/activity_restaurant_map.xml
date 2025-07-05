@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.RestaurantMapActivity">
+
+    <!-- MapView to display the map -->
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:mapType="normal" />
+
+    <!-- SearchView to find restaurants -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:iconifiedByDefault="true"
+        android:queryHint="Search Restaurants..."
+        android:background="@color/white"
+        android:padding="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Bottom sheet to display restaurant details, using FrameLayout -->
+    <FrameLayout
+        android:id="@+id/restaurantBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorSurface"
+        android:elevation="8dp"
+        android:padding="16dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Restaurant Image -->
+            <ImageView
+                android:id="@+id/restaurantImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:src="@drawable/track_map"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Restaurant Name -->
+            <TextView
+                android:id="@+id/restaurantName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Restaurant Name"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Restaurant Rating -->
+            <TextView
+                android:id="@+id/restaurantRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rating..."
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="14sp" />
+
+            <!-- Restaurant Description -->
+            <TextView
+                android:id="@+id/restaurantDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="restaurantDescription.."
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="14sp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Floating action buttons for zoom controls inside LinearLayout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center">
+
+                <!-- Zoom In Button -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/zoomInButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:contentDescription="Zoom In"
+                    android:src="@drawable/zoom_in"
+                    android:tint="@android:color/white"/>
+
+                <!-- Zoom Out Button -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/zoomOutButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:contentDescription="Zoom Out"
+                    android:src="@drawable/zoom_out"
+                    android:tint="@android:color/white"/>
+                <!-- Button to center the user's location -->
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/locationButton"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/location_7"
+                    android:contentDescription="current_location"
+                    android:tint="@android:color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

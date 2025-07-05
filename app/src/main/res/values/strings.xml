@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Taste wave app</string>
+    <string name="wave_image">wave_image</string>
+    <string name="taste">Taste</string>
+    <string name="wave">Wave</string>
+    <string name="splash_image">splash_image</string>
+    <string name="taste_wave">Taste Wave</string>
+    <string name="the_food_delivery_app">The Food Delivery App</string>
+    <string name="skip">Skip</string>
+    <string name="get_started_with_taste_wave">Get started with Taste Wave</string>
+    <string name="Continue">Continue</string>
+    <string name="welcome">Welcome</string>
+
+    <string name="google_maps_key">AIzaSyDK7Rx40amcyl22adOdOzLhnGL7xCFAbBU</string>
+
+
+    <string-array name="sort_options">
+        <item>Sort by Name</item>
+        <item>Sort by Rating</item>
+        <item>Sort by Price</item>
+    </string-array>
+
+    <string-array name="payment_method_types">
+        <item>Credit Card</item>
+        <item>Debit Card</item>
+        <item>PayPal</item>
+        <item>Google Pay</item>
+    </string-array>
+
+    <!-- Order Picking Types -->
+    <string-array name="picking_types">
+        <item>At My Door</item>
+        <item>Pickup Point</item>
+        <item>Hand Over in Person</item>
+    </string-array>
+
+    <!-- Order Priority Types -->
+    <string-array name="priority_types">
+        <item>Standard</item>
+        <item>Express</item>
+        <item>Urgent</item>
+    </string-array>
+
+</resources>
+

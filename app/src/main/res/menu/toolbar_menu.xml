@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_login"
+        android:icon="@drawable/menu"
+        android:title="Log_In"
+         />
+
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/menu"
+        android:title="My Reviews"
+         />
+
+</menu>
